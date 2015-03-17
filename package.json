@@ -1,0 +1,12 @@
+{
+  "name": "newTest",
+  "version": "1.0.0",
+  "description": "myTestApp",
+  "main": "server.js",
+  "author": "AndreyFizer",
+  "private": true,
+  "dependencies": {
+    "express": "^4.12.2",
+    "morgan": "^1.5.1"
+  }
+}
