@@ -3,19 +3,30 @@
  */
 var express = require('express');
 var app = express();
-var loger=require('morgan');
+var loger = require('morgan');
 
-/*function myCustomStack(req,res,next){
-    console.log(req.headers['user-agent']);
-    next();
-}*/
+/*function myCustomStack(req, res, next){
+ console.log(req.ip);
+ var pos = (req.ip).lastIndexOf(':');
+ var s = (req.ip).substr(pos+1);
+ console.log(s);
+ var acceptedIps = ['192.168.88.43'];
+ for(var i = 0; i < acceptedIps.length; i++) {
+ if (s === acceptedIps[i]) {
+ next();
+ } else {
+ next('Access denied');
+ }
+ }
+ }*/
 
-app.use(myCustomStack);
+//app.use(myCustomStack);
 app.use(loger('dev'));
+
 
 
 require('./routers/index.js')(app);
 
-app.listen(3030,function(){
-    console.log('-----Express start success-----');
+app.listen(3030, function(){
+    console.log('--- Express start success ----');
 });
