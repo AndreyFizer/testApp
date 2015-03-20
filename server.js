@@ -25,7 +25,7 @@ app.use(loger('dev'));
 
 
 
-require('./routers/index.js')(app);
+require('./routers/index.js')(ap);
 
 app.listen(3030, function(){
     console.log('--- Express start success ----');
